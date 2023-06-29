@@ -1,0 +1,433 @@
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateStudents (20230626133817)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "city" varchar, "state" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230626133817"]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-06-26 13:39:06.480091"], ["updated_at", "2023-06-26 13:39:06.480091"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2023-06-26 19:09:45 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/welcome/.rvm/gems/ruby-3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/welcome/.rvm/gems/ruby-3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.8ms | Allocations: 830)
+Completed 200 OK in 26ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 10279)
+
+
+Started GET "/" for ::1 at 2023-06-26 19:09:47 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/welcome/.rvm/gems/ruby-3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/welcome/.rvm/gems/ruby-3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.3ms | Allocations: 452)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 1328)
+
+
+Started POST "/users/login" for ::1 at 2023-06-28 01:26:48 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/users/login"):
+  
+Started GET "/api/students" for ::1 at 2023-06-28 01:27:38 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Create (0.5ms)[0m  [1m[32mINSERT INTO "students" ("name", "city", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Nitish Kumar"], ["city", "indore"], ["state", "MP"], ["created_at", "2023-06-27 19:58:44.234172"], ["updated_at", "2023-06-27 19:58:44.234172"]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Create (0.3ms)[0m  [1m[32mINSERT INTO "students" ("name", "city", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Rajesh Kumar"], ["city", "indore"], ["state", "MP"], ["created_at", "2023-06-27 19:58:55.754081"], ["updated_at", "2023-06-27 19:58:55.754081"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Create (0.4ms)[0m  [1m[32mINSERT INTO "students" ("name", "city", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Manoj Kumar"], ["city", "indore"], ["state", "MP"], ["created_at", "2023-06-27 19:59:04.546473"], ["updated_at", "2023-06-27 19:59:04.546473"]]
+  [1m[36mTRANSACTION (7.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Create (0.6ms)[0m  [1m[32mINSERT INTO "students" ("name", "city", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ramesh Kumar"], ["city", "indore"], ["state", "MP"], ["created_at", "2023-06-27 19:59:13.589690"], ["updated_at", "2023-06-27 19:59:13.589690"]]
+  [1m[36mTRANSACTION (9.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Create (0.3ms)[0m  [1m[32mINSERT INTO "students" ("name", "city", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Suresh Kumar"], ["city", "indore"], ["state", "MP"], ["created_at", "2023-06-27 19:59:21.641778"], ["updated_at", "2023-06-27 19:59:21.641778"]]
+  [1m[36mTRANSACTION (7.9ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/api/students" for ::1 at 2023-06-28 01:29:35 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/api/students" for ::1 at 2023-06-28 01:30:14 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/api/students"):
+  
+Started GET "/api/v1/students" for ::1 at 2023-06-28 01:30:52 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+Started GET "/api/v1/students" for ::1 at 2023-06-28 01:31:18 +0530
+  
+Grape::Exceptions::MissingMimeType (
+Problem:
+  missing mime type for html
+Resolution:
+  you can choose existing mime type from Grape::ContentTypes::CONTENT_TYPES or add your own with content_type :html, 'application/html' ):
+  
+app/api/music_store/v1/students.rb:5:in `<class:Students>'
+app/api/music_store/v1/students.rb:3:in `<module:V1>'
+app/api/music_store/v1/students.rb:2:in `<module:MusicStore>'
+app/api/music_store/v1/students.rb:1:in `<main>'
+app/api/music_store/base.rb:3:in `<class:Base>'
+app/api/music_store/base.rb:2:in `<module:MusicStore>'
+app/api/music_store/base.rb:1:in `<main>'
+config/routes.rb:9:in `block in <main>'
+config/routes.rb:4:in `<main>'
+Started GET "/api/v1/hello" for ::1 at 2023-06-28 01:37:15 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/api/v1/students" for ::1 at 2023-06-28 01:41:23 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+Started GET "/api/v1/students" for ::1 at 2023-06-28 02:01:55 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+Started POST "/api/v1/students" for ::1 at 2023-06-28 02:02:30 +0530
+Started POST "/api/v1/students" for ::1 at 2023-06-28 02:04:33 +0530
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/api/music_store/v1/students.rb:22:in `block (2 levels) in <class:Students>'
+  [1m[36mStudent Create (0.2ms)[0m  [1m[32mINSERT INTO "students" ("name", "city", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "rohan Kumar"], ["city", "indore"], ["state", "MP"], ["created_at", "2023-06-27 20:34:33.973992"], ["updated_at", "2023-06-27 20:34:33.973992"]]
+  ↳ app/api/music_store/v1/students.rb:22:in `block (2 levels) in <class:Students>'
+  [1m[36mTRANSACTION (7.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/api/music_store/v1/students.rb:22:in `block (2 levels) in <class:Students>'
+Started GET "/api/v1/1" for ::1 at 2023-06-28 02:31:57 +0530
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:29:in `block (2 levels) in <class:Students>'
+Started GET "/api/v1/2" for ::1 at 2023-06-28 02:32:09 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:29:in `block (2 levels) in <class:Students>'
+Started GET "/api/v1/3" for ::1 at 2023-06-28 02:32:19 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:29:in `block (2 levels) in <class:Students>'
+Started GET "/api/v1/students" for ::1 at 2023-06-28 20:17:42 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+Started GET "/api/v1/hello" for ::1 at 2023-06-28 20:17:53 +0530
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:29:in `block (2 levels) in <class:Students>'
+  
+ActiveRecord::RecordNotFound (Couldn't find Student with 'id'=hello):
+  
+app/api/music_store/v1/students.rb:29:in `block (2 levels) in <class:Students>'
+Started GET "/api/v1/hello" for ::1 at 2023-06-28 20:18:04 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:29:in `block (2 levels) in <class:Students>'
+  
+ActiveRecord::RecordNotFound (Couldn't find Student with 'id'=hello):
+  
+app/api/music_store/v1/students.rb:29:in `block (2 levels) in <class:Students>'
+Started GET "/api/v1/3" for ::1 at 2023-06-28 20:18:11 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:29:in `block (2 levels) in <class:Students>'
+Started GET "/api/v1/3" for ::1 at 2023-06-28 20:18:39 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/3"):
+  
+Started GET "/api/v1/3" for ::1 at 2023-06-28 20:18:42 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/3"):
+  
+Started GET "/api/v1/3" for ::1 at 2023-06-28 20:18:48 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:29:in `block (2 levels) in <class:Students>'
+Started GET "/api/v1/3" for ::1 at 2023-06-28 20:32:56 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/3"):
+  
+Started GET "/api/v1/students/3" for ::1 at 2023-06-28 20:33:02 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:29:in `block (3 levels) in <class:Students>'
+Started GET "/api/v1/students/3" for ::1 at 2023-06-28 23:09:24 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:28:in `block (3 levels) in <class:Students>'
+Started DELETE "/api/v1/students/3" for ::1 at 2023-06-28 23:09:33 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:59:in `block (3 levels) in <class:Students>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/api/music_store/v1/students.rb:60:in `block (3 levels) in <class:Students>'
+  [1m[36mStudent Destroy (0.4ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 3]]
+  ↳ app/api/music_store/v1/students.rb:60:in `block (3 levels) in <class:Students>'
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/api/music_store/v1/students.rb:60:in `block (3 levels) in <class:Students>'
+Started DELETE "/api/v1/students/3" for ::1 at 2023-06-28 23:10:05 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:47:in `block (3 levels) in <class:Students>'
+  
+ActiveRecord::RecordNotFound (Couldn't find Student with 'id'=3):
+  
+app/api/music_store/v1/students.rb:47:in `block (3 levels) in <class:Students>'
+Started DELETE "/api/v1/students/4" for ::1 at 2023-06-28 23:10:13 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:47:in `block (3 levels) in <class:Students>'
+  
+NoMethodError (undefined method `destroy?' for #<Student id: 4, name: "Ramesh Kumar", city: "indore", state: "MP", created_at: "2023-06-27 19:59:13.589690000 +0000", updated_at: "2023-06-27 19:59:13.589690000 +0000">
+Did you mean?  destroy
+               destroyed?
+               destroy!
+               _destroy):
+  
+app/api/music_store/v1/students.rb:48:in `block (3 levels) in <class:Students>'
+Started DELETE "/api/v1/students/4" for ::1 at 2023-06-28 23:11:01 +0530
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:47:in `block (3 levels) in <class:Students>'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/api/music_store/v1/students.rb:48:in `block (3 levels) in <class:Students>'
+  [1m[36mStudent Destroy (0.4ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 4]]
+  ↳ app/api/music_store/v1/students.rb:48:in `block (3 levels) in <class:Students>'
+  [1m[36mTRANSACTION (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/api/music_store/v1/students.rb:48:in `block (3 levels) in <class:Students>'
+Started DELETE "/api/v1/students/4" for ::1 at 2023-06-28 23:11:17 +0530
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:47:in `block (3 levels) in <class:Students>'
+  
+ActiveRecord::RecordNotFound (Couldn't find Student with 'id'=4):
+  
+app/api/music_store/v1/students.rb:47:in `block (3 levels) in <class:Students>'
+Started GET "/api/v1/students" for ::1 at 2023-06-28 23:11:35 +0530
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+Started PUT "/api/v1/students/5" for ::1 at 2023-06-28 23:29:44 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:61:in `block (3 levels) in <class:Students>'
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument, NilClass passed.):
+  
+app/api/music_store/v1/students.rb:62:in `block (3 levels) in <class:Students>'
+Started PUT "/api/v1/students/5" for ::1 at 2023-06-29 00:35:30 +0530
+  
+SyntaxError (/home/welcome/grape-api-project/app/api/music_store/v1/students.rb:62: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+...s[:city],state:params[:state]})
+...                              ^
+/home/welcome/grape-api-project/app/api/music_store/v1/students.rb:63: syntax error, unexpected '}', expecting `end'
+... detail updated successfully' }
+...                              ^
+/home/welcome/grape-api-project/app/api/music_store/v1/students.rb:65: syntax error, unexpected '}', expecting `end'
+...   { message: 'Update failed' }
+...                              ^
+/home/welcome/grape-api-project/app/api/music_store/v1/students.rb:73: syntax error, unexpected `do' for lambda, expecting `end'
+        get 'hello' do
+                    ^~
+/home/welcome/grape-api-project/app/api/music_store/v1/students.rb:74: syntax error, unexpected '}', expecting `end'
+...   { message: 'Hello, world!' }
+...                              ^
+):
+  
+app/api/music_store/v1/students.rb:62: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/api/music_store/v1/students.rb:63: syntax error, unexpected '}', expecting `end'
+app/api/music_store/v1/students.rb:65: syntax error, unexpected '}', expecting `end'
+app/api/music_store/v1/students.rb:73: syntax error, unexpected `do' for lambda, expecting `end'
+app/api/music_store/v1/students.rb:74: syntax error, unexpected '}', expecting `end'
+app/api/music_store/v1/students.rb:62: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/api/music_store/v1/students.rb:63: syntax error, unexpected '}', expecting `end'
+app/api/music_store/v1/students.rb:65: syntax error, unexpected '}', expecting `end'
+app/api/music_store/v1/students.rb:73: syntax error, unexpected `do' for lambda, expecting `end'
+app/api/music_store/v1/students.rb:74: syntax error, unexpected '}', expecting `end'
+app/api/music_store/base.rb:3:in `<class:Base>'
+app/api/music_store/base.rb:2:in `<module:MusicStore>'
+app/api/music_store/base.rb:1:in `<main>'
+config/routes.rb:9:in `block in <main>'
+config/routes.rb:4:in `<main>'
+Started PUT "/api/v1/students/5" for ::1 at 2023-06-29 00:37:05 +0530
+  
+SyntaxError (/home/welcome/grape-api-project/app/api/music_store/v1/students.rb:62: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+...s[:city],state:params[:state]})
+...                              ^
+/home/welcome/grape-api-project/app/api/music_store/v1/students.rb:63: syntax error, unexpected '}', expecting `end'
+... detail updated successfully' }
+...                              ^
+/home/welcome/grape-api-project/app/api/music_store/v1/students.rb:65: syntax error, unexpected '}', expecting `end'
+...   { message: 'Update failed' }
+...                              ^
+/home/welcome/grape-api-project/app/api/music_store/v1/students.rb:76: syntax error, unexpected `do' for lambda, expecting `end'
+        get 'hello' do
+                    ^~
+/home/welcome/grape-api-project/app/api/music_store/v1/students.rb:77: syntax error, unexpected '}', expecting `end'
+...   { message: 'Hello, world!' }
+...                              ^
+):
+  
+app/api/music_store/v1/students.rb:62: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/api/music_store/v1/students.rb:63: syntax error, unexpected '}', expecting `end'
+app/api/music_store/v1/students.rb:65: syntax error, unexpected '}', expecting `end'
+app/api/music_store/v1/students.rb:76: syntax error, unexpected `do' for lambda, expecting `end'
+app/api/music_store/v1/students.rb:77: syntax error, unexpected '}', expecting `end'
+app/api/music_store/v1/students.rb:62: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/api/music_store/v1/students.rb:63: syntax error, unexpected '}', expecting `end'
+app/api/music_store/v1/students.rb:65: syntax error, unexpected '}', expecting `end'
+app/api/music_store/v1/students.rb:76: syntax error, unexpected `do' for lambda, expecting `end'
+app/api/music_store/v1/students.rb:77: syntax error, unexpected '}', expecting `end'
+app/api/music_store/base.rb:3:in `<class:Base>'
+app/api/music_store/base.rb:2:in `<module:MusicStore>'
+app/api/music_store/base.rb:1:in `<main>'
+config/routes.rb:9:in `block in <main>'
+config/routes.rb:4:in `<main>'
+Started PUT "/api/v1/students/5" for ::1 at 2023-06-29 00:37:12 +0530
+  
+ActionController::RoutingError (No route matches [PUT] "/api/v1/students/5"):
+  
+Started PUT "/api/v1/students/5" for ::1 at 2023-06-29 00:38:19 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:61:in `block (3 levels) in <class:Students>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/api/music_store/v1/students.rb:62:in `block (3 levels) in <class:Students>'
+  [1m[36mStudent Update (0.2ms)[0m  [1m[33mUPDATE "students" SET "name" = ?, "city" = ?, "state" = ?, "updated_at" = ? WHERE "students"."id" = ?[0m  [["name", "Narendra modi"], ["city", "Delhi"], ["state", "Delhi"], ["updated_at", "2023-06-28 19:08:19.876800"], ["id", 5]]
+  ↳ app/api/music_store/v1/students.rb:62:in `block (3 levels) in <class:Students>'
+  [1m[36mTRANSACTION (7.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/api/music_store/v1/students.rb:62:in `block (3 levels) in <class:Students>'
+Started GET "/api/v1/students/5" for ::1 at 2023-06-29 00:38:38 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:28:in `block (3 levels) in <class:Students>'
+Started POST "/api/v1/students" for ::1 at 2023-06-29 01:41:47 +0530
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/api/music_store/v1/students.rb:28:in `block (2 levels) in <class:Students>'
+  [1m[36mStudent Create (0.2ms)[0m  [1m[32mINSERT INTO "students" ("name", "city", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Sandeep khede"], ["city", "Texas"], ["state", "Telangana"], ["created_at", "2023-06-28 20:11:47.969099"], ["updated_at", "2023-06-28 20:11:47.969099"]]
+  ↳ app/api/music_store/v1/students.rb:28:in `block (2 levels) in <class:Students>'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/api/music_store/v1/students.rb:28:in `block (2 levels) in <class:Students>'
+Started GET "/api/v1/students" for ::1 at 2023-06-29 01:43:12 +0530
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+Started PUT "/api/v1/students/5" for ::1 at 2023-06-29 01:43:57 +0530
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:54:in `block (3 levels) in <class:Students>'
+Started GET "/api/v1/students" for ::1 at 2023-06-29 01:44:11 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+Started GET "/api/v1/students" for ::1 at 2023-06-29 01:44:15 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+Started PUT "/api/v1/students/5" for ::1 at 2023-06-29 01:44:21 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:54:in `block (3 levels) in <class:Students>'
+Started PUT "/api/v1/students/5" for ::1 at 2023-06-29 01:44:31 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:54:in `block (3 levels) in <class:Students>'
+Started DELETE "/api/v1/students/1" for ::1 at 2023-06-29 01:45:52 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:42:in `block (3 levels) in <class:Students>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/api/music_store/v1/students.rb:43:in `block (3 levels) in <class:Students>'
+  [1m[36mStudent Destroy (0.2ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 1]]
+  ↳ app/api/music_store/v1/students.rb:43:in `block (3 levels) in <class:Students>'
+  [1m[36mTRANSACTION (8.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/api/music_store/v1/students.rb:43:in `block (3 levels) in <class:Students>'
+Started PUT "/api/v1/students/5" for ::1 at 2023-06-29 01:46:05 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:54:in `block (3 levels) in <class:Students>'
+Started PUT "/api/v1/students/5" for ::1 at 2023-06-29 01:48:12 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:54:in `block (3 levels) in <class:Students>'
+Started GET "/api/v1/students" for ::1 at 2023-06-29 01:48:43 +0530
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+Started PUT "/api/v1/students/7" for ::1 at 2023-06-29 01:48:54 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:54:in `block (3 levels) in <class:Students>'
+Started PUT "/api/v1/students/7" for ::1 at 2023-06-29 01:49:43 +0530
+Started PATCH "/api/v1/students/7" for ::1 at 2023-06-29 01:49:56 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:54:in `block (3 levels) in <class:Students>'
+Started PATCH "/api/v1/students/7" for ::1 at 2023-06-29 01:50:02 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:54:in `block (3 levels) in <class:Students>'
+Started PATCH "/api/v1/students/7" for ::1 at 2023-06-29 01:57:22 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:54:in `block (3 levels) in <class:Students>'
+  
+NoMethodError (undefined method `save' for true:TrueClass):
+  
+app/api/music_store/v1/students.rb:55:in `block (3 levels) in <class:Students>'
+Started PATCH "/api/v1/students/7" for ::1 at 2023-06-29 01:58:34 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:54:in `block (3 levels) in <class:Students>'
+Started PATCH "/api/v1/students/7" for ::1 at 2023-06-29 01:59:19 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:54:in `block (3 levels) in <class:Students>'
+Started PUT "/api/v1/students/7" for ::1 at 2023-06-29 01:59:42 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:54:in `block (3 levels) in <class:Students>'
+Started PUT "/api/v1/students/7" for ::1 at 2023-06-29 02:00:49 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:55:in `block (3 levels) in <class:Students>'
+Started PUT "/api/v1/students/7" for ::1 at 2023-06-29 02:01:06 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mStudent Load (27.5ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:55:in `block (3 levels) in <class:Students>'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ (rdbg)//home/welcome/grape-api-project/app/api/music_store/v1/students.rb:1:in `block (3 levels) in <class:Students>'
+Started PUT "/api/v1/students/7" for ::1 at 2023-06-29 02:09:50 +0530
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:55:in `block (3 levels) in <class:Students>'
+Started PUT "/api/v1/students/7" for ::1 at 2023-06-29 02:10:00 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:55:in `block (3 levels) in <class:Students>'
+Started POST "/api/v1/students" for ::1 at 2023-06-29 02:18:29 +0530
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/api/music_store/v1/students.rb:28:in `block (2 levels) in <class:Students>'
+  [1m[36mStudent Create (0.2ms)[0m  [1m[32mINSERT INTO "students" ("name", "city", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ra-1"], ["city", "Texas"], ["state", "Telangana"], ["created_at", "2023-06-28 20:48:29.722577"], ["updated_at", "2023-06-28 20:48:29.722577"]]
+  ↳ app/api/music_store/v1/students.rb:28:in `block (2 levels) in <class:Students>'
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/api/music_store/v1/students.rb:28:in `block (2 levels) in <class:Students>'
+Started PUT "/api/v1/students/7" for ::1 at 2023-06-29 02:18:48 +0530
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:55:in `block (3 levels) in <class:Students>'
+Started PUT "/api/v1/students/7" for ::1 at 2023-06-29 02:18:59 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:55:in `block (3 levels) in <class:Students>'
+Started POST "/api/v1/students" for ::1 at 2023-06-29 02:31:12 +0530
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/api/music_store/v1/students.rb:28:in `block (2 levels) in <class:Students>'
+  [1m[36mStudent Create (0.4ms)[0m  [1m[32mINSERT INTO "students" ("name", "city", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ra-2"], ["city", "Texas"], ["state", "Telangana"], ["created_at", "2023-06-28 21:01:12.545565"], ["updated_at", "2023-06-28 21:01:12.545565"]]
+  ↳ app/api/music_store/v1/students.rb:28:in `block (2 levels) in <class:Students>'
+  [1m[36mTRANSACTION (9.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/api/music_store/v1/students.rb:28:in `block (2 levels) in <class:Students>'
+Started GET "/api/v1/students/5" for ::1 at 2023-06-29 02:31:27 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:34:in `block (3 levels) in <class:Students>'
+Started GET "/api/v1/students/6" for ::1 at 2023-06-29 02:31:32 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:34:in `block (3 levels) in <class:Students>'
+Started PUT "/api/v1/students/7" for ::1 at 2023-06-29 02:32:32 +0530
+  [1m[36mStudent Load (25.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:55:in `block (3 levels) in <class:Students>'
+Started PUT "/api/v1/students/7" for ::1 at 2023-06-29 02:36:32 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:55:in `block (3 levels) in <class:Students>'
+Started PUT "/api/v1/students/7" for ::1 at 2023-06-29 02:36:51 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mStudent Load (28.8ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:55:in `block (3 levels) in <class:Students>'
+Started PUT "/api/v1/students/7" for ::1 at 2023-06-29 02:42:10 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:60:in `block (3 levels) in <class:Students>'
+  
+ArgumentError (wrong number of arguments (given 0, expected 1..4)):
+  
+app/api/music_store/v1/students.rb:10:in `student_params'
+app/api/music_store/v1/students.rb:62:in `block (3 levels) in <class:Students>'
+Started PUT "/api/v1/students/7" for ::1 at 2023-06-29 02:43:32 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:60:in `block (3 levels) in <class:Students>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/api/music_store/v1/students.rb:62:in `block (3 levels) in <class:Students>'
+  [1m[36mStudent Update (0.2ms)[0m  [1m[33mUPDATE "students" SET "name" = ?, "city" = ?, "state" = ?, "updated_at" = ? WHERE "students"."id" = ?[0m  [["name", nil], ["city", "vizag"], ["state", "Chennai"], ["updated_at", "2023-06-28 21:13:32.259005"], ["id", 7]]
+  ↳ app/api/music_store/v1/students.rb:62:in `block (3 levels) in <class:Students>'
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/api/music_store/v1/students.rb:62:in `block (3 levels) in <class:Students>'
+Started GET "/api/v1/students" for ::1 at 2023-06-29 18:23:53 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  
+NoMethodError (undefined method `id' for #<ActiveRecord::Relation [#<Student id: 2, name: "Rajesh Kumar", city: "indore", state: "MP", created_at: "2023-06-27 19:58:55.754081000 +0000", updated_at: "2023-06-27 19:58:55.754081000 +0000">, #<Student id: 5, name: "Narendra modi", city: "Delhi", state: "Delhi", created_at: "2023-06-27 19:59:21.641778000 +0000", updated_at: "2023-06-28 19:08:19.876800000 +0000">, #<Student id: 6, name: "rohan Kumar", city: "indore", state: "MP", created_at: "2023-06-27 20:34:33.973992000 +0000", updated_at: "2023-06-27 20:34:33.973992000 +0000">, #<Student id: 7, name: nil, city: "vizag", state: "Chennai", created_at: "2023-06-28 20:11:47.969099000 +0000", updated_at: "2023-06-28 21:13:32.259005000 +0000">, #<Student id: 8, name: "Ra-1", city: "Texas", state: "Telangana", created_at: "2023-06-28 20:48:29.722577000 +0000", updated_at: "2023-06-28 20:48:29.722577000 +0000">, #<Student id: 9, name: "Ra-2", city: "Texas", state: "Telangana", created_at: "2023-06-28 21:01:12.545565000 +0000", updated_at: "2023-06-28 21:01:12.545565000 +0000">]>
+Did you mean?  ids):
+  
+app/api/music_store/v1/students.rb:15:in `selected_attr'
+app/api/music_store/v1/students.rb:26:in `block (2 levels) in <class:Students>'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/api/v1/students" for ::1 at 2023-06-29 18:31:30 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/api/music_store/v1/students.rb:14:in `map'
+Started GET "/api/v1/hello" for ::1 at 2023-06-29 18:32:36 +0530
