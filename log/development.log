@@ -431,3 +431,197 @@ Started GET "/api/v1/students" for ::1 at 2023-06-29 18:31:30 +0530
   [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
   ↳ app/api/music_store/v1/students.rb:14:in `map'
 Started GET "/api/v1/hello" for ::1 at 2023-06-29 18:32:36 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCourses (20230629140744)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "courses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "course_name" varchar, "number" float, "no_of_subject" integer, "percentage" float, "student_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230629140744"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/api/v1/students" for ::1 at 2023-06-29 20:49:14 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/api/music_store/v1/students.rb:15:in `map'
+Started GET "/api/v1/students/2" for ::1 at 2023-06-29 20:50:17 +0530
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/students.rb:45:in `block (3 levels) in <class:Students>'
+Started GET "/api/v1/students/2/courses" for ::1 at 2023-06-29 20:50:29 +0530
+Started POST "/api/v1/students/2/courses" for ::1 at 2023-06-29 20:50:37 +0530
+Started POST "/api/v1/students/2/courses" for ::1 at 2023-06-29 20:52:29 +0530
+Started POST "/api/v1/students/2/courses" for ::1 at 2023-06-29 20:53:45 +0530
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/courses.rb:29:in `block (4 levels) in <class:Courses>'
+  
+NoMethodError (undefined method `create!' for #<Student id: 2, name: "Rajesh Kumar", city: "indore", state: "MP", created_at: "2023-06-27 19:58:55.754081000 +0000", updated_at: "2023-06-27 19:58:55.754081000 +0000">
+Did you mean?  created_at):
+  
+app/api/music_store/v1/courses.rb:30:in `block (4 levels) in <class:Courses>'
+Started POST "/api/v1/students/2/courses" for ::1 at 2023-06-29 20:55:17 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/courses.rb:28:in `block (4 levels) in <class:Courses>'
+  
+NoMethodError (undefined method `create!' for #<Student id: 2, name: "Rajesh Kumar", city: "indore", state: "MP", created_at: "2023-06-27 19:58:55.754081000 +0000", updated_at: "2023-06-27 19:58:55.754081000 +0000">
+Did you mean?  created_at):
+  
+app/api/music_store/v1/courses.rb:29:in `block (4 levels) in <class:Courses>'
+Started POST "/api/v1/students/2/courses" for ::1 at 2023-06-29 20:55:45 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/courses.rb:28:in `block (4 levels) in <class:Courses>'
+  
+NoMethodError (undefined method `create' for #<Student id: 2, name: "Rajesh Kumar", city: "indore", state: "MP", created_at: "2023-06-27 19:58:55.754081000 +0000", updated_at: "2023-06-27 19:58:55.754081000 +0000">
+Did you mean?  created_at):
+  
+app/api/music_store/v1/courses.rb:29:in `block (4 levels) in <class:Courses>'
+Started POST "/api/v1/students/2/courses" for ::1 at 2023-06-29 20:56:32 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/courses.rb:28:in `block (4 levels) in <class:Courses>'
+  
+NoMethodError (undefined method `create' for #<Student id: 2, name: "Rajesh Kumar", city: "indore", state: "MP", created_at: "2023-06-27 19:58:55.754081000 +0000", updated_at: "2023-06-27 19:58:55.754081000 +0000">
+Did you mean?  created_at):
+  
+app/api/music_store/v1/courses.rb:28:in `block (4 levels) in <class:Courses>'
+Started POST "/api/v1/students/2/courses" for ::1 at 2023-06-29 21:02:01 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/courses.rb:28:in `block (4 levels) in <class:Courses>'
+  
+NoMethodError (undefined method `course' for #<Student id: 2, name: "Rajesh Kumar", city: "indore", state: "MP", created_at: "2023-06-27 19:58:55.754081000 +0000", updated_at: "2023-06-27 19:58:55.754081000 +0000">
+Did you mean?  courses
+               courses=):
+  
+app/api/music_store/v1/courses.rb:28:in `block (4 levels) in <class:Courses>'
+Started POST "/api/v1/students/2/courses" for ::1 at 2023-06-29 21:02:33 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/courses.rb:28:in `block (4 levels) in <class:Courses>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/api/music_store/v1/courses.rb:28:in `block (4 levels) in <class:Courses>'
+  [1m[36mCourse Create (0.4ms)[0m  [1m[32mINSERT INTO "courses" ("course_name", "number", "no_of_subject", "percentage", "student_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["course_name", "10th"], ["number", 400.0], ["no_of_subject", 5], ["percentage", 80.0], ["student_id", 2], ["created_at", "2023-06-29 15:32:33.359126"], ["updated_at", "2023-06-29 15:32:33.359126"]]
+  ↳ app/api/music_store/v1/courses.rb:28:in `block (4 levels) in <class:Courses>'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/api/music_store/v1/courses.rb:28:in `block (4 levels) in <class:Courses>'
+Started POST "/api/v1/students/2/courses" for ::1 at 2023-06-29 21:07:04 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/courses.rb:28:in `block (4 levels) in <class:Courses>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/api/music_store/v1/courses.rb:28:in `block (4 levels) in <class:Courses>'
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("course_name", "number", "no_of_subject", "percentage", "student_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["course_name", "12th"], ["number", 400.0], ["no_of_subject", 5], ["percentage", 80.0], ["student_id", 2], ["created_at", "2023-06-29 15:37:04.503071"], ["updated_at", "2023-06-29 15:37:04.503071"]]
+  ↳ app/api/music_store/v1/courses.rb:28:in `block (4 levels) in <class:Courses>'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/api/music_store/v1/courses.rb:28:in `block (4 levels) in <class:Courses>'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/courses.rb:30:in `block (4 levels) in <class:Courses>'
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."student_id" = ?[0m  [["student_id", 2]]
+Started GET "/api/v1/students/2/courses" for ::1 at 2023-06-29 22:24:16 +0530
+  
+SyntaxError (/home/welcome/grape-api-project/app/api/music_store/v1/courses.rb:58: syntax error, unexpected `end', expecting end-of-input):
+  
+app/api/music_store/v1/courses.rb:58: syntax error, unexpected `end', expecting end-of-input
+app/api/music_store/v1/courses.rb:58: syntax error, unexpected `end', expecting end-of-input
+app/api/music_store/base.rb:4:in `<class:Base>'
+app/api/music_store/base.rb:2:in `<module:MusicStore>'
+app/api/music_store/base.rb:1:in `<main>'
+config/routes.rb:9:in `block in <main>'
+config/routes.rb:4:in `<main>'
+Started GET "/api/v1/students/2/courses" for ::1 at 2023-06-29 22:24:40 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/api/v1/students/2/courses" for ::1 at 2023-06-29 22:24:49 +0530
+Started GET "/api/v1/students/2/courses" for ::1 at 2023-06-29 22:27:45 +0530
+Started GET "/api/v1/students/2/courses" for ::1 at 2023-06-29 22:28:29 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/courses.rb:44:in `block (4 levels) in <class:Courses>'
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."student_id" = ?[0m  [["student_id", 2]]
+  ↳ app/api/music_store/v1/courses.rb:45:in `block (4 levels) in <class:Courses>'
+Started GET "/api/v1/students/3/courses" for ::1 at 2023-06-29 22:29:00 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/courses.rb:44:in `block (4 levels) in <class:Courses>'
+  
+ActiveRecord::RecordNotFound (Couldn't find Student with 'id'=3):
+  
+app/api/music_store/v1/courses.rb:44:in `block (4 levels) in <class:Courses>'
+Started GET "/api/v1/students/4/courses" for ::1 at 2023-06-29 22:29:03 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/courses.rb:44:in `block (4 levels) in <class:Courses>'
+  
+ActiveRecord::RecordNotFound (Couldn't find Student with 'id'=4):
+  
+app/api/music_store/v1/courses.rb:44:in `block (4 levels) in <class:Courses>'
+Started GET "/api/v1/students/5/courses" for ::1 at 2023-06-29 22:29:14 +0530
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/courses.rb:44:in `block (4 levels) in <class:Courses>'
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."student_id" = ?[0m  [["student_id", 5]]
+  ↳ app/api/music_store/v1/courses.rb:45:in `block (4 levels) in <class:Courses>'
+Started GET "/api/v1/students/6/courses" for ::1 at 2023-06-29 22:29:18 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/courses.rb:44:in `block (4 levels) in <class:Courses>'
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."student_id" = ?[0m  [["student_id", 6]]
+  ↳ app/api/music_store/v1/courses.rb:45:in `block (4 levels) in <class:Courses>'
+Started GET "/api/v1/students/7/courses" for ::1 at 2023-06-29 22:29:22 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/courses.rb:44:in `block (4 levels) in <class:Courses>'
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."student_id" = ?[0m  [["student_id", 7]]
+  ↳ app/api/music_store/v1/courses.rb:45:in `block (4 levels) in <class:Courses>'
+Started GET "/api/v1/students/2/courses" for ::1 at 2023-06-29 22:29:26 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/courses.rb:44:in `block (4 levels) in <class:Courses>'
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."student_id" = ?[0m  [["student_id", 2]]
+  ↳ app/api/music_store/v1/courses.rb:45:in `block (4 levels) in <class:Courses>'
+Started GET "/api/v1/students/5/courses" for ::1 at 2023-06-29 22:29:43 +0530
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/courses.rb:44:in `block (4 levels) in <class:Courses>'
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."student_id" = ?[0m  [["student_id", 5]]
+  ↳ app/api/music_store/v1/courses.rb:45:in `block (4 levels) in <class:Courses>'
+Started POST "/api/v1/students/5/courses" for ::1 at 2023-06-29 22:30:12 +0530
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/courses.rb:28:in `block (4 levels) in <class:Courses>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/api/music_store/v1/courses.rb:28:in `block (4 levels) in <class:Courses>'
+  [1m[36mCourse Create (0.4ms)[0m  [1m[32mINSERT INTO "courses" ("course_name", "number", "no_of_subject", "percentage", "student_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["course_name", "12th"], ["number", 400.0], ["no_of_subject", 5], ["percentage", 80.0], ["student_id", 5], ["created_at", "2023-06-29 17:00:12.500619"], ["updated_at", "2023-06-29 17:00:12.500619"]]
+  ↳ app/api/music_store/v1/courses.rb:28:in `block (4 levels) in <class:Courses>'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/api/music_store/v1/courses.rb:28:in `block (4 levels) in <class:Courses>'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/courses.rb:30:in `block (4 levels) in <class:Courses>'
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."student_id" = ?[0m  [["student_id", 5]]
+Started GET "/api/v1/students/5/courses" for ::1 at 2023-06-29 22:33:22 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/courses.rb:44:in `block (4 levels) in <class:Courses>'
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."student_id" = ?[0m  [["student_id", 5]]
+  ↳ app/api/music_store/v1/courses.rb:45:in `block (4 levels) in <class:Courses>'
+Started POST "/api/v1/students/5/courses" for ::1 at 2023-06-29 22:33:33 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/courses.rb:28:in `block (4 levels) in <class:Courses>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/api/music_store/v1/courses.rb:28:in `block (4 levels) in <class:Courses>'
+  [1m[36mCourse Create (0.2ms)[0m  [1m[32mINSERT INTO "courses" ("course_name", "number", "no_of_subject", "percentage", "student_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["course_name", "10th"], ["number", 400.0], ["no_of_subject", 5], ["percentage", 80.0], ["student_id", 5], ["created_at", "2023-06-29 17:03:33.326436"], ["updated_at", "2023-06-29 17:03:33.326436"]]
+  ↳ app/api/music_store/v1/courses.rb:28:in `block (4 levels) in <class:Courses>'
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/api/music_store/v1/courses.rb:28:in `block (4 levels) in <class:Courses>'
+Started GET "/api/v1/students/5/courses" for ::1 at 2023-06-29 22:33:40 +0530
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/courses.rb:44:in `block (4 levels) in <class:Courses>'
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."student_id" = ?[0m  [["student_id", 5]]
+  ↳ app/api/music_store/v1/courses.rb:45:in `block (4 levels) in <class:Courses>'
+Started GET "/api/v1/students/5/courses" for ::1 at 2023-06-29 22:35:11 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/courses.rb:44:in `block (4 levels) in <class:Courses>'
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."student_id" = ?[0m  [["student_id", 5]]
+  ↳ app/api/music_store/v1/courses.rb:45:in `block (4 levels) in <class:Courses>'
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."student_id" = ? ORDER BY "courses"."created_at" DESC[0m  [["student_id", 5]]
+Started GET "/api/v1/students/5/courses" for ::1 at 2023-06-29 22:57:21 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/courses.rb:44:in `block (4 levels) in <class:Courses>'
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."student_id" = ?[0m  [["student_id", 5]]
+  ↳ app/api/music_store/v1/courses.rb:45:in `block (4 levels) in <class:Courses>'
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."student_id" = ? ORDER BY "courses"."created_at" DESC[0m  [["student_id", 5]]
+Started GET "/api/v1/students/2/courses" for ::1 at 2023-06-29 22:57:28 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/courses.rb:44:in `block (4 levels) in <class:Courses>'
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."student_id" = ?[0m  [["student_id", 2]]
+  ↳ app/api/music_store/v1/courses.rb:45:in `block (4 levels) in <class:Courses>'
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."student_id" = ? ORDER BY "courses"."created_at" DESC[0m  [["student_id", 2]]
+Started GET "/api/v1/students/2/courses" for ::1 at 2023-06-29 22:57:47 +0530
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/api/music_store/v1/courses.rb:44:in `block (4 levels) in <class:Courses>'
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."student_id" = ?[0m  [["student_id", 2]]
+  ↳ app/api/music_store/v1/courses.rb:45:in `block (4 levels) in <class:Courses>'
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."student_id" = ? ORDER BY "courses"."created_at" DESC[0m  [["student_id", 2]]
